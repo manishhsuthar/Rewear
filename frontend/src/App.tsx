@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { createBrowserRouter, RouterProvider, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
 import LandingPage from './pages/LandingPage';
@@ -11,30 +11,34 @@ import DashboardPage from './pages/DashboardPage';
 import SignUpPage from './pages/SignUpPage';
 import HelpPage from './pages/HelpPage';
 
+const AppLayout = () => (
+  <div className="min-h-screen bg-eco-cream flex flex-col">
+    <Navbar />
+    <main className="flex-1">
+      <Outlet />
+    </main>
+    <Footer />
+  </div>
+);
+
+const router = createBrowserRouter([
+  {
+    element: <AppLayout />,
+    children: [
+      { path: "/", element: <LandingPage /> },
+      { path: "/browse", element: <BrowsePage /> },
+      { path: "/item/:id", element: <ItemDetailPage /> },
+      { path: "/list-item", element: <ListItemPage /> },
+      { path: "/login", element: <LoginPage /> },
+      { path: "/dashboard", element: <DashboardPage /> },
+      { path: "/signup", element: <SignUpPage /> },
+      { path: "/help", element: <HelpPage /> },
+    ],
+  },
+]);
+
 function App() {
-  return (
-    <Router>
-      <div className="min-h-screen bg-eco-cream flex flex-col">
-        <Navbar />
-        
-        <main className="flex-1">
-          <Routes>
-            <Route path="/" element={<LandingPage />} />
-            <Route path="/browse" element={<BrowsePage />} />
-            <Route path="/item/:id" element={<ItemDetailPage />} />
-            <Route path="/list-item" element={<ListItemPage />} />
-            {/* Placeholder routes */}
-            <Route path="/login" element={<LoginPage />} />
-            <Route path="/dashboard" element={<DashboardPage />} />
-            <Route path="/signup" element={<SignUpPage />} />
-            <Route path="/help" element={<HelpPage />} />
-          </Routes>
-        </main>
-        
-        <Footer />
-      </div>
-    </Router>
-  );
+  return <RouterProvider router={router} />;
 }
 
 export default App;
