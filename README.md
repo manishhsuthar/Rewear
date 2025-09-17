@@ -1,5 +1,5 @@
 # ♻️ **ReWear**
-### 🌿 *Odoo Hackathon 2025*
+### 🌿 *A Personal Project on Sustainable Fashion*
 
 ---
 
@@ -20,6 +20,7 @@ ReWear connects eco-conscious communities and promotes circular fashion through:
 - 📸 Easy item listing with photos & tags
 - 🛡️ Admin moderation to keep listings clean and safe
 
+---
 
 ## 👥 **Team Members**
 
@@ -51,7 +52,7 @@ Check our interactive mockup 👉 [Excalidraw Link](https://app.excalidraw.com/l
 ## 📦 Tech Stack
 
 | Tech                          | Purpose                                    |
-|------------------------------:|--------------------------------------------:|
+|:------------------------------|:--------------------------------------------|
 | React + TypeScript           | Frontend framework                         |
 | Vite                         | Build tool & dev server                    |
 | Tailwind CSS                 | Utility-first styling                      |
@@ -71,33 +72,15 @@ git clone https://github.com/Aditya-ps88/Rewear.git
 cd Rewear
 npm install
 ```
-```bash
-cd backend
-cp .env.example .env
-pip install -r requirements.txt
-python manage.py migrate
-python manage.py createsuperuser
-python manage.py runserver
-```
-## ScreenShots
 
-<img src='./demo/11.png'>
-<img src='./demo/12.png'>
-<img src='./demo/13.png'>
-<img src='./demo/14.png'>
-<img src='./demo/15.png'>
-<img src='./demo/16.png'>
+## 📸 Screenshots
 
-## This the Demo Video ReWear Project By Odoo(due to quality issue we changed to higher resolution video)
->https://drive.google.com/file/d/1mliPi1P8UXPT8tFRdk10CAx--Nx4hoGU/view?usp=sharing
+<img src='./demo/11.png'> <img src='./demo/12.png'> <img src='./demo/13.png'> <img src='./demo/14.png'> <img src='./demo/15.png'> <img src='./demo/16.png'>
 
-## 🚀 **Goal**
-> Make sustainable fashion accessible and fun by building a trusted, user-friendly platform to swap and reuse clothes instead of letting them go to waste.
+## 🚀 Goal
+  
+  Make sustainable fashion accessible and fun by building a trusted, user-friendly platform to swap and reuse clothes instead of letting them go to waste.
 
----
+## 🙌 Acknowledgments
 
-## ❤️‍🔥 **Special Thanks**
-To **Odoo Hackathon 2025** for inspiring us to build for sustainability and circular fashion! ✨
-
----
-
+Thanks to everyone who supported and contributed to this project. We aim to empower communities to embrace circular fashion and make a difference! 🌍✨
