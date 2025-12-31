@@ -1,4 +1,4 @@
-import { ClothingItem, User, Category } from '../types';
+import { ClothingItem, User, UserProfile, Category } from '../types';
 
 export const mockUsers: User[] = [
   {
@@ -17,60 +17,84 @@ export const mockUsers: User[] = [
   }
 ];
 
-export const mockItems: ClothingItem[] = [
+export const mockUserProfiles: UserProfile[] = [
   {
     id: 1,
-    title: 'Vintage Denim Jacket',
-    description: 'Beautiful vintage denim jacket in excellent condition. Perfect for sustainable fashion lovers.',
-    category: 'unisex',
-    size: 'M',
-    condition: 'good',
-    images: ['https://i.pinimg.com/736x/55/0d/50/550d50c57923ec5dc1198edb26f9016d.jpg '],
-    owner: mockUsers[0],
-    available: true,
-    created_at: '2024-01-22T09:15:00Z',
-    points_value: 45
+    user: mockUsers[0],
+    profile_picture_url: 'https://i.pravatar.cc/150?u=eco_sarah',
+    bio: 'Sustainable fashion enthusiast. Swapping my way to a greener closet!',
+    points: 150,
+    created_at: '2024-01-15T10:00:00Z'
   },
   {
     id: 2,
-    title: 'Organic Cotton Dress',
+    user: mockUsers[1],
+    profile_picture_url: 'https://i.pravatar.cc/150?u=green_mike',
+    bio: 'Love finding unique pre-loved pieces. Let\'s trade!',
+    points: 89,
+    created_at: '2024-01-20T14:30:00Z'
+  }
+];
+
+export const mockItems: ClothingItem[] = [
+  {
+    id: 1,
+    name: 'Vintage Denim Jacket',
+    description: 'Beautiful vintage denim jacket in excellent condition. Perfect for sustainable fashion lovers.',
+    category: 'other',
+    size: 'M',
+    condition: 'like_new',
+    image: 'https://i.pinimg.com/736x/55/0d/50/550d50c57923ec5dc1198edb26f9016d.jpg ',
+    owner: mockUserProfiles[0],
+    status: 'available',
+    is_featured: true,
+    type: 'unisex',
+    tags: 'denim, vintage, jacket'
+  },
+  {
+    id: 2,
+    name: 'Organic Cotton Dress',
     description: 'Flowing organic cotton dress, perfect for summer. Barely worn, like new condition.',
-    category: 'women',
+    category: 'bottom',
     size: 'S',
-    condition: 'like-new',
-    images: ['https://i.pinimg.com/1200x/50/77/8a/50778a92f2a5490280e135b63432fc08.jpg'],
-    owner: mockUsers[1],
-    available: true,
-    created_at: '2024-01-23T16:20:00Z',
-    points_value: 55
+    condition: 'new',
+    image: 'https://i.pinimg.com/1200x/50/77/8a/50778a92f2a5490280e135b63432fc08.jpg',
+    owner: mockUserProfiles[1],
+    status: 'available',
+    is_featured: false,
+    type: 'women',
+    tags: 'cotton, dress, summer'
   },
   {
     id: 3,
-    title: 'Kids Rainbow Sweater',
+    name: 'Kids Rainbow Sweater',
     description: 'Colorful hand-knit sweater for kids. Made with eco-friendly yarn.',
-    category: 'kids',
+    category: 'top',
     size: '6-8 years',
-    condition: 'good',
-    images: ['https://i.pinimg.com/736x/cb/d9/a4/cbd9a46ecea94540ae8b3ad3bbc00883.jpg'],
-    owner: mockUsers[0],
-    available: true,
-    created_at: '2024-01-24T11:45:00Z',
-    points_value: 30
+    condition: 'used',
+    image: 'https://i.pinimg.com/736x/cb/d9/a4/cbd9a46ecea94540ae8b3ad3bbc00883.jpg',
+    owner: mockUserProfiles[0],
+    status: 'available',
+    is_featured: false,
+    type: 'kids',
+    tags: 'kids, sweater, colorful'
   },
   {
     id: 4,
-    title: 'Sustainable Wool Coat',
+    name: 'Sustainable Wool Coat',
     description: 'High-quality wool coat from sustainable sources. Professional and stylish.',
-    category: 'men',
+    category: 'top',
     size: 'L',
-    condition: 'like-new',
-    images: ['https://i.pinimg.com/736x/1c/e9/77/1ce977a1998f3f523a5080e732de14d8.jpg'],
-    owner: mockUsers[1],
-    available: true,
-    created_at: '2024-01-25T08:30:00Z',
-    points_value: 75
+    condition: 'like_new',
+    image: 'https://i.pinimg.com/736x/1c/e9/77/1ce977a1998f3f523a5080e732de14d8.jpg',
+    owner: mockUserProfiles[1],
+    status: 'available',
+    is_featured: true,
+    type: 'men',
+    tags: 'wool, coat, sustainable'
   }
 ];
+
 
 export const categories: Category[] = [
   {
